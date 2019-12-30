@@ -21,7 +21,7 @@ public class DatabassAccessObject {
 	public DatabassAccessObject() throws Exception {
 		String dburl = "jdbc:mysql://localhost:3306/examination?serverTimezone=UTC&characterEncoding=utf8&useSSL=false";
 		String dbusername = "root";
-		String dbpassword = "root";
+		String dbpassword = "0000";
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		this.con = DriverManager.getConnection(dburl, dbusername, dbpassword);
 	}
