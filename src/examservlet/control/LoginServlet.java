@@ -49,7 +49,7 @@ public class LoginServlet extends HttpServlet {
 		String ID = request.getParameter("ID").trim();
 		String password = request.getParameter("password").trim();
 		String userRole = request.getParameter("role").trim();
-		String uri = "jdbc:mysql://127.0.0.1/examination?user=root&password=0000&serverTimezone=UTC&characterEncoding=UTF-8";
+		String uri = "jdbc:mysql://127.0.0.1/examination?user=root&password=root&serverTimezone=UTC&characterEncoding=UTF-8";
 
 		boolean boo = (ID.length() > 0) && (password.length() > 0);
 		try {

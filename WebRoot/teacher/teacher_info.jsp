@@ -14,7 +14,7 @@
 
 	<sql:setDataSource var="db" driver="com.mysql.cj.jdbc.Driver"
 		url="jdbc:mysql://localhost:3306/examination?useUnicode=true&serverTimezone=UTC&characterEncoding=utf-8"
-		user="root" password="0000" />
+		user="root" password="root" />
 	<sql:query dataSource="${db}" var="student">
 		SELECT * FROM student ;
 	</sql:query>
