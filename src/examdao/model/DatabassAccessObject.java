@@ -8,29 +8,29 @@ import java.sql.ResultSet;
 
 /**
  * @author JK164-39
- *¸ÃÀàÊÇÊı¾İ¿âÁ¬½Ó¶ÔÏó£¬ÊµÏÖ¹¦ÄÜ£º
- *Á¬½ÓÊı¾İ¿â£¬Ôö¼Ó¡¢É¾³ı¡¢ĞŞ¸Ä¡¢²éÑ¯Êı¾İ¡£
+ *è¯¥ç±»æ˜¯æ•°æ®åº“è¿æ¥å¯¹è±¡ï¼Œå®ç°åŠŸèƒ½ï¼š
+ *è¿æ¥æ•°æ®åº“ï¼Œå¢åŠ ã€åˆ é™¤ã€ä¿®æ”¹ã€æŸ¥è¯¢æ•°æ®ã€‚
  */
 public class DatabassAccessObject {
 	private Connection con;
  
 	/**
-	 * ¹¹Ôìº¯Êı£¬Á¬½ÓÊı¾İ¿â
+	 * æ„é€ å‡½æ•°ï¼Œè¿æ¥æ•°æ®åº“
 	 * @throws Exception
 	 */
 	public DatabassAccessObject() throws Exception {
 		String dburl = "jdbc:mysql://localhost:3306/examination?serverTimezone=UTC&characterEncoding=utf8&useSSL=false";
 		String dbusername = "root";
-		String dbpassword = "0000";
+		String dbpassword = "root";
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		this.con = DriverManager.getConnection(dburl, dbusername, dbpassword);
 	}
  
 	/**
-	 * Êı¾İ¿â²éÑ¯
-	 * @param sql  ÈÎÒâµÄSQL²éÑ¯Óï¾ä
-	 * @param args ÈÎÒâ¸öÓÃÓÚÌæ»»Õ¼Î»·ûµÄĞÎ²Î
-	 * @return		·µ»ØRestultSetÀàĞÍµÄ½á¹û¼¯
+	 * æ•°æ®åº“æŸ¥è¯¢
+	 * @param sql  ä»»æ„çš„SQLæŸ¥è¯¢è¯­å¥
+	 * @param args ä»»æ„ä¸ªç”¨äºæ›¿æ¢å ä½ç¬¦çš„å½¢å‚
+	 * @return		è¿”å›RestultSetç±»å‹çš„ç»“æœé›†
 	 * @throws Exception
 	 */
 	public ResultSet query(String sql, Object... args) throws Exception {
@@ -42,10 +42,10 @@ public class DatabassAccessObject {
 	}
  
 	/**
-	 * ÏòÊı¾İ¿â²åÈëÒ»ÌõÊı¾İ
-	 * @param sql	ÈÎÒâµÄSQL²åÈëÓï¾ä
-	 * @param args	ÈÎÒâ¸öÓÃÓÚÌæ»»Õ¼Î»·ûµÄĞÎ²Î
-	 * @return		·µ»ØÖµÊÇ²¼¶ûÀàĞÍ
+	 * å‘æ•°æ®åº“æ’å…¥ä¸€æ¡æ•°æ®
+	 * @param sql	ä»»æ„çš„SQLæ’å…¥è¯­å¥
+	 * @param args	ä»»æ„ä¸ªç”¨äºæ›¿æ¢å ä½ç¬¦çš„å½¢å‚
+	 * @return		è¿”å›å€¼æ˜¯å¸ƒå°”ç±»å‹
 	 * @throws Exception
 	 */
 	public boolean insert(String sql, Object... args) throws Exception {
@@ -60,10 +60,10 @@ public class DatabassAccessObject {
 	}
  
 	/**
-	 * ĞŞ¸ÄÊı¾İ¿âÖĞµÄÊı¾İ
-	 * @param sql	ÈÎÒâµÄSQL¸üĞÂÓï¾ä
-	 * @param args	ÈÎÒâ¸öÓÃÓÚÌæ»»Õ¼Î»·ûµÄĞÎ²Î
-	 * @return		·µ»ØÖµÊÇ²¼¶ûÀàĞÍ
+	 * ä¿®æ”¹æ•°æ®åº“ä¸­çš„æ•°æ®
+	 * @param sql	ä»»æ„çš„SQLæ›´æ–°è¯­å¥
+	 * @param args	ä»»æ„ä¸ªç”¨äºæ›¿æ¢å ä½ç¬¦çš„å½¢å‚
+	 * @return		è¿”å›å€¼æ˜¯å¸ƒå°”ç±»å‹
 	 * @throws Exception
 	 */
 	public boolean modify(String sql, Object... args) throws Exception {
@@ -77,7 +77,7 @@ public class DatabassAccessObject {
 		return true;
 	}
  
-	// Îö¹¹º¯Êı£¬ÖĞ¶ÏÊı¾İ¿âµÄÁ¬½Ó
+	// ææ„å‡½æ•°ï¼Œä¸­æ–­æ•°æ®åº“çš„è¿æ¥
 	protected void finalize() throws Exception {
 		if (!con.isClosed() || con != null) {
 			con.close();
