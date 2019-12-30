@@ -32,8 +32,8 @@ java 8 + jsp + mysql + tomcat + javascript + css
 - 项目开发语言：java 8；
 - Excel工具包：[apache-poi 4.1.0](https://poi.apache.org/)；
 - JSP标准标签库：jstl；
-- 本地服务器：tomcat9.0
-- 数据库：mysql8
+- 本地服务器：tomcat9.0；
+- 数据库：mysql8；
 
 
 ## 启动
@@ -44,7 +44,7 @@ git clone https://github.com/acrx016/examOnline.git
 2. 导入数据库文件到MySQL
 ```
 examination.sql
-连接账号：root；密码：root
+连接账号：root；密码：0000
 数据库连接账号访问可以在examOnline\src\examdao\model\DatabassAccessObject.java中修改
 ```
 3. 部署到tomcat既可运行启动,本地访问路径:
