@@ -44,7 +44,7 @@ git clone https://github.com/acrx016/examOnline.git
 2. 导入数据库文件到MySQL
 ```
 examination.sql
-连接账号：root；密码：0000
+连接账号：root；密码：root
 数据库连接账号访问可以在examOnline\src\examdao\model\DatabassAccessObject.java中修改
 ```
 3. 部署到tomcat既可运行启动,本地访问路径:
