@@ -39,17 +39,17 @@ java 8 + jsp + mysql + tomcat + javascript + css
 ## 启动
 1. 从git克隆项目导入到编译器
 ```
-git clone https://github.com/acrx016/examOnline.git
+git clone https://github.com/acrx016/examonline.git
 ```
 2. 导入数据库文件到MySQL
 ```
 examination.sql
 连接账号：root；密码：root
-数据库连接账号访问可以在examOnline\src\examdao\model\DatabassAccessObject.java中修改
+数据库连接账号访问可以在examonline\src\examdao\model\DatabassAccessObject.java中修改
 ```
 3. 部署到tomcat既可运行启动,本地访问路径:
 ```
-http://localhost:8080/examOnline/login.jsp
+http://localhost:8080/examonline/login.jsp
 ```
 
 ## 业务流程
